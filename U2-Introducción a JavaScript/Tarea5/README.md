@@ -57,4 +57,3 @@ siguientes operaciones empleando desplazamiento de bits:
 25 / 2 =
 10 x 16 =
 
-![GitHub Logo](./img/índice11.png)
