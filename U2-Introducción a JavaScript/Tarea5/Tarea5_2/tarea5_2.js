@@ -1,9 +1,8 @@
 //Ejercicio 2 Tarea 5 Jorge Cordero Gordillo
 
 var texto = "ejemplo"
-var x;
 var result = "";
-for (x in texto) {
+for (var x in texto) {
     result += texto[x]
     console.log(x)
 }
