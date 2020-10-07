@@ -12,7 +12,7 @@ Usar el archivo parImpar.html (este archivo está incompleto).
 Recorre mediante for-in una variable llamada texto que representa a la cadena “ejemplo”.
 ¿Qué resultados obtenemos al ejecutar?¿Qué conclusión podemos extraer?
 
-https://www.w3schools.com/jsref/jsref_forin.asp - automatic!
+https://www.w3schools.com/jsref/jsref_forin.asp
 
 #### Ejercicio 3:
 

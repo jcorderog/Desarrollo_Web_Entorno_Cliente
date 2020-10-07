@@ -47,7 +47,7 @@ El script nos pedirá el radio y la altura de un cilindro y mostrará su volumen
 La fórmula es:  .V=PI * r * r * h
 (Puedes usar el valor 3.14 para la constante PI )
 
-![GitHub Logo](./img/índice7.png)
+![GitHub Logo](./img/índice7.png)  
 ![GitHub Logo](./img/índice8.png)
 
 Por fin, nos mostrará el resultado:
@@ -69,7 +69,7 @@ Vamos a realizar un script que nos pregunte el nombre y la edad. Nos responderá
 
 El script, en primer lugar nos hará dos preguntas
 
-![GitHub Logo](./img/índice9.png)
+![GitHub Logo](./img/índice9.png)  
 ![GitHub Logo](./img/índice10.png)
 
 Observa que la respuesta se muestra en dos filas diferentes, en la primera está el nombre y en la siguiente el resto:
