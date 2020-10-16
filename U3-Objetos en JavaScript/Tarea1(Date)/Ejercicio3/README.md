@@ -1,6 +1,6 @@
 ### U3T1 - Date
 
-* Ejercicio 3
+Ejercicio 3
 -----------
 Crea un programa que muestre la fecha actual en diferentes formatos, según el valor que introduzca
 el usuario por parámetro:

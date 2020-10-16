@@ -1,6 +1,6 @@
 ### U3T1 - Date
 
-* Ejercicio 4
+Ejercicio 4
 -----------
 Crea un programa que muestre la hora actual en diferentes formatos, según el valor que introduzca
 el usuario por parámetro:
