@@ -17,12 +17,22 @@
 let miVentana;
 
 function crearVentana() {
-    miVentana = window.open("","","width=400,heigth=500");
-    miVentana.document.write("<h1>Mi Ventana</h1><br><button onclick=\"cerrarVentana()\">Cerra Ventana</button>")
+    let confirma = confirm("¿Desea abrir una nueva ventana?");
+
+    if (confirma) {
+        miVentana = window.open("","","width=200,heigth=80, top=500");
+        miVentana.document.write('<h1>Mi Ventana</h1><br><button type="button" onclick="window.close()">Cerra Ventana</button>');
+    }
+    
 }
 
 function cerrarVentana() {
-    miVentana.close();
+    if (!miVentana.closed) {
+        miVentana.close();
+    } else {
+        alert("La ventana ya está cerrada");
+    }
+    
 }
 
 function moverVentana() {
