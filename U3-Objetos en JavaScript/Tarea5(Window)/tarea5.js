@@ -20,7 +20,7 @@ function crearVentana() {
     let confirma = confirm("¿Desea abrir una nueva ventana?");
 
     if (confirma) {
-        miVentana = window.open("","","width=200,heigth=80, top=500");
+        miVentana = window.open("","","width=200,heigth=80, top=500, resizable=yes, toolbar=yes,location=yes, menubar=yes");
         miVentana.document.write('<h1>Mi Ventana</h1><br><button type="button" onclick="window.close()">Cerra Ventana</button>');
     }
     
