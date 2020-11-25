@@ -11,7 +11,7 @@ function btn (pulsado,clase,id,idImg) {
     this.getIdImg = function (){
         return this.idImg;
     };
-}
+};
 
 let botones = new Array();
 
@@ -25,9 +25,11 @@ function mostrarImg(id) {
     
     if (i%2!=0) {
         comprobar(clase);
-    }
-    i++;
-}
+    } else {
+        i++;
+    };
+    
+};
 
 function comprobar (clase) {
     if(botones[i].getClase() === botones[i-1].getClase()) {
@@ -39,10 +41,13 @@ function comprobar (clase) {
         setTimeout(() => {
             document.getElementById(botones[i].getIdImg()).style.visibility = "hidden";
             document.getElementById(botones[i-1].getIdImg()).style.visibility = "hidden";
-            console.log("Hola");
-        }, 1000);
+            i++;
+        },1000);
     } else {
-        document.getElementById(botones[i].getIdImg()).style.visibility = "hidden";
-        document.getElementById(botones[i-1].getIdImg()).style.visibility = "hidden";
-    }
-}
+        setTimeout(() => {
+            document.getElementById(botones[i].getIdImg()).style.visibility = "hidden";
+            document.getElementById(botones[i-1].getIdImg()).style.visibility = "hidden";
+            i++;
+        },1000);
+    };
+};
