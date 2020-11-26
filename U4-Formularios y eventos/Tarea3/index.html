@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discos</title>
+    <script src="./disco.js"></script>
+</head>
+<body>
+    <form action="" id="formularioDisco">
+        <table>
+            <tr>
+                <td><h1>Añadir Disco</h1></td>
+            </tr>
+            <tr>
+                <td><label for="nombre">Nombre del Disco:</label></td>
+                <td><input type="text" name="nombre" id="nm"></td>
+            </tr>
+            <tr>
+                <td><label for="grupo">Grupo de Música/Cantante:</label></td>
+                <td><input type="text" name="grupo" id="gr"></td>
+            </tr>
+            <tr>
+                <td><label for="año">Año de publicación:</label></td>
+                <td><input type="text" name="año" id="a"></td>
+            </tr>
+            <tr>
+                <td><label for="tipo">Tipo de música:</label></td>
+                <td><select name="tipo" id="t">
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="punk">Punk</option>
+                    <option value="indie">Indie</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="localizacion">Localización:</label></td>
+                <td><input type="number" name="localizacion" id="lo"></td>
+            </tr>
+            <tr>
+                <td><label for="prestado">Prestado:</label></td>
+                <td><input type="checkbox" name="prestado" id="p"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="enviar" id="en" value="Enviar" /></td>
+                <td><input type="reset" name="reset" id="re" value="Borrar"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
