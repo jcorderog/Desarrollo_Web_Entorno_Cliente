@@ -94,13 +94,16 @@ let discos = new Array(disco1,disco2,disco3);
 
 
 
-let discoP = new Disco();
-let nombreDP = document.getElementById("nm");
-let grupoDP = document.getElementById("gr");
-let anoDP = document.getElementById("a");
-let tipoDP = document.getElementById("t");
-let localizacionDP = document.getElementById("lo");
-let prestadoDP = document.getElementById("p");
+
+let nombreDP = document.getElementById("nm").value;
+let grupoDP = document.getElementById("gr").value;
+let anoDP = document.getElementById("a").value;
+let tipoDP = document.getElementById("t").value;
+let localizacionDP = document.getElementById("lo").value;
+let prestadoDP = false;
+if (document.getElementById("p").checked) {
+    prestadoDP = true;
+}
 discoP.addDatos(nombreDP,grupoDP,anoDP,tipoDP,localizacionDP,prestadoDP);
 
 
