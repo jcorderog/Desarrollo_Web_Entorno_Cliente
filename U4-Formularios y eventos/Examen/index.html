@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js"></script>
+    <style>
+        .correct {
+            border: solid 2px green;
+        } 
+        .error {
+            border: solid 2px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Electrodomésticos</h2>
+        <form action="">
+            <label for="name">Nombre del Modelo:</label>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="model">Modelo:</label>
+            <select name="model" id="model">
+                <option value="0">Selecciona una opción</option>
+                <option value="1">Televisor</option>
+                <option value="2">Frigorífico</option>
+                <option value="3">Lavadora</option>
+                <option value="4">Microondas</option>
+                <option value="5">Lavavajillas</option>
+            </select>
+            <br>
+            <label for="date">Fecha fabricación:</label>
+            <input type="text" name="date" id="date">
+            <br>
+            <label for="consumo">Consumo Energético:</label>
+            <input type="text" name="consumo" id="consumo">
+            <br>
+            <label for="reference">Referencia del Modelo:</label>
+            <input type="text" name="reference" id="reference">
+            <br>
+            <label for="password">Contraseña Comercial:</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <div id="errores"></div>
+            <div id="referencias"></div>
+            <br>
+            <button type="reset">Limpiar</button>
+            <button type="submit" id="enviar" name="enviar">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
