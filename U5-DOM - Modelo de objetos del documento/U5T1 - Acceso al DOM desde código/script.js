@@ -33,7 +33,7 @@ function enlacesWiki () {
     let cantidad = 0;
 
     for(let i = 0; i<doc.lastChild.getElementsByTagName("a").length;i++) {
-        if(doc.lastChild.getElementsByTagName("a")[i].attributes["href"].value == "/wiki/Municipio.") {
+        if(doc.lastChild.getElementsByTagName("a")[i].attributes["href"].value == "/wiki/Municipio") {
             cantidad++;
         }
     }
