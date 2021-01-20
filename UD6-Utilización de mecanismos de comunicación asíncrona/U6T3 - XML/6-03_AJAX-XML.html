@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 5px;
+      }
+
+      .rojo {
+        background-color: red;
+      }
+      .amarillo {
+        background-color: yellow;
+      }
+      .verde {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="texto">
+      <h1>Colección de CDs</h1>
+      <button id="cargaCatalogo">Carga catálogo</button>
+    </div>
+    <table id="demo"></table>
+
+    <script>
+      document.getElementById("cargaCatalogo").addEventListener("click", cargarCatalogo);
+
+      function cargarCatalogo() {
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            cargarXML(xhr);
+          }
+        };
+        xhr.open("GET", "catalogo.xml", true);
+        xhr.send();
+      }
+
+      function cargarXML(xml) {
+        let docXML = xml.responseXML;
+        let tabla = "<tr><th>Titulo</th><th>Cadena</th><th>Director</th><th>Año</th><th>Terminada</th></tr>";
+        let series = docXML.getElementsByTagName("SERIE");
+        for (let i = 0; i < series.length; i++) {
+          tabla += "<tr><td><b>";
+          tabla += series[i].getElementsByTagName("TITULO")[0].textContent;
+          tabla += "</b></td><td>";
+          tabla += series[i].getElementsByTagName("CADENA")[0].textContent;
+          tabla += "</td><td><i>";
+          tabla += series[i].getElementsByTagName("DIRECTOR")[0].textContent;
+          if (series[i].getElementsByTagName("ANYO")[0].textContent < 2000) {
+            tabla += '</i></td><td class="rojo">';
+          } else if (series[i].getElementsByTagName("ANYO")[0].textContent >= 2001 && series[i].getElementsByTagName("ANYO")[0].textContent <= 2010) {
+            tabla += '</i></td><td class="amarillo">';
+          } else if (series[i].getElementsByTagName("ANYO")[0].textContent >= 2011) {
+            tabla += '</i></td><td class="verde">';
+          }
+          tabla += series[i].getElementsByTagName("ANYO")[0].textContent;
+          tabla += "</td><td>";
+          tabla += series[i].getElementsByTagName("TERMINADA")[0].textContent;
+          tabla += "</td></tr>";
+        }
+        document.getElementById("demo").innerHTML = tabla;
+      }
+
+
+    </script>
+  </body>
+</html>

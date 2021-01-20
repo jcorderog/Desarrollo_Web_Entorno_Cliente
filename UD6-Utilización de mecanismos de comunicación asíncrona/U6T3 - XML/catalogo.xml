@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SERIES>
+  <SERIE>
+    <TITULO>Empire Burlesque</TITULO>
+    <CADENA>USA</CADENA>
+    <DIRECTOR>Bob Dylan</DIRECTOR>
+    <ANYO>2001</ANYO>
+    <TERMINADA>SI</TERMINADA>
+  </SERIE>
+  <SERIE>
+    <TITULO>Hide your heart</TITULO>
+    <CADENA>UK</CADENA>
+    <DIRECTOR>Bonnie Tyler</DIRECTOR>
+    <ANYO>1988</ANYO>
+    <TERMINADA>SI</TERMINADA>
+  </SERIE>
+  <SERIE>
+    <TITULO>Greatest Hits</TITULO>
+    <CADENA>USA</CADENA>
+    <DIRECTOR>Dolly Parton</DIRECTOR>
+    <ANYO>2011</ANYO>
+    <TERMINADA>NO</TERMINADA>
+  </SERIE>
+  <SERIE>
+    <TITULO>Still got the blues</TITULO>
+    <CADENA>UK</CADENA>
+    <DIRECTOR>Gary Moore</DIRECTOR>
+    <ANYO>2005</ANYO>
+    <TERMINADA>SI</TERMINADA>
+  </SERIE>
+</SERIES>
