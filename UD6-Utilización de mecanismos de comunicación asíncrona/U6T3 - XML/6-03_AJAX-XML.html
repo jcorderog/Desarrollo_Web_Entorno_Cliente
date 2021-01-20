@@ -68,7 +68,13 @@
           }
           tabla += series[i].getElementsByTagName("ANYO")[0].textContent;
           tabla += "</td><td>";
-          tabla += series[i].getElementsByTagName("TERMINADA")[0].textContent;
+          let aux = series[i].getElementsByTagName("TERMINADA")[0].textContent;
+          if (aux === "SI") {
+            tabla += '<img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Visto_Bueno.png" width="50px" heigth="50px"';
+          } else {
+            tabla += '<img src="https://image.freepik.com/iconos-gratis/x-simbolo_318-1407.jpg" width="50px" heigth="50px"';
+          }
+          
           tabla += "</td></tr>";
         }
         document.getElementById("demo").innerHTML = tabla;
