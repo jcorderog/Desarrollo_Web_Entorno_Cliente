@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 5px;
+      }
+
+      .rojo {
+        background-color: red;
+      }
+      .amarillo {
+        background-color: yellow;
+      }
+      .verde {
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="texto">
+      <h1>Series</h1>
+      <button id="cargaCatalogo">Carga catálogo</button>
+    </div>
+    <table id="demo"></table>
+
+    <script>
+      document.getElementById("cargaCatalogo").addEventListener("click", cargarCatalogo);
+
+      function cargarCatalogo() {
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            cargarJSON(xhr);
+          }
+        };
+        xhr.open("GET", "datosjson.php", true);
+        xhr.send();
+      }
+
+      function cargarJSON(json) {
+        let docJSON = JSON.parse(json.responseText);
+        let tabla = "<tr><th>Titulo</th><th>Cadena</th><th>Director</th><th>Año</th><th>Terminada</th></tr>";
+        //let series = docJSON.SERIES;
+        for (let i = 0; i < docJSON.length; i++) {
+          tabla += "<tr><td><b>";
+          tabla += docJSON[i].TITULO;
+          tabla += "</b></td><td>";
+          tabla += docJSON[i].CADENA;
+          tabla += "</td><td><i>";
+          tabla += docJSON[i].DIRECTOR;
+          if (docJSON[i].ANYO < 2000) {
+            tabla += '</i></td><td class="rojo">';
+          } else if (docJSON[i].ANYO >= 2001 && docJSON[i].ANYO <= 2010) {
+            tabla += '</i></td><td class="amarillo">';
+          } else if (docJSON[i].ANYO >= 2011) {
+            tabla += '</i></td><td class="verde">';
+          }
+          tabla += docJSON[i].ANYO;
+          tabla += "</td><td>";
+          let aux = docJSON[i].TERMINADA;
+          if (aux === "Si") {
+            tabla += '<img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Visto_Bueno.png" width="50px" heigth="50px"';
+          } else {
+            tabla += '<img src="https://image.freepik.com/iconos-gratis/x-simbolo_318-1407.jpg" width="50px" heigth="50px"';
+          }
+          
+          tabla += "</td></tr>";
+        }
+        document.getElementById("demo").innerHTML = tabla;
+      }
+
+
+    </script>
+  </body>
+</html>
