@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+    <script defer src="script.js"></script>
+    <style>
+        table,
+        th,
+        td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+  
+        th,
+        td {
+          padding: 5px;
+        }
+  
+        .rojo {
+          background-color: red;
+        }
+        .amarillo {
+          background-color: yellow;
+        }
+        .verde {
+          background-color: green;
+        }
+      </style>
+</head>
+<body>
+
+    <label for="titulo">Introduce un titulo:</label>
+    <input type="text" id="titulo" name="titulo">
+    <br>
+    <label for="director">Introduce el director:</label>
+    <input type="text" id="director" name="director">
+    <br>
+    <label for="cadena">Introduce la cadena:</label>
+    <input type="text" id="cadena" name="cadena">
+    <br>
+    <label for="anyo">Introduce el año:</label>
+    <input type="number" id="anyo" name="anyo">
+    <br>
+    <label for="terminada">Terminada:</label>
+    <input type="checkbox" id="terminada" name="terminada">
+    <br>
+    <button id="enviar">Enviar</button>
+
+    <div id="resultado"></div>
+    
+    <table id="demo"></table>
+</body>
+</html>
