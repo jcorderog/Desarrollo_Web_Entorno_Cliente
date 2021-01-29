@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <form action="" id="formulario">
+        <label for="cantidadCol">Introduce la cantidad de columnas:</label>
+        <input type="text" id="cantidadCol" name="cantidadCol">
+        <br>
+        <label for="cantidadRow">Introduce la cantidad de filas:</label>
+        <input type="text" id="cantidadRow" name="cantidadRow">
+        <br>
+        <label for="header">Introducir Header:</label>
+        <input type="checkbox" id="header" name="header">
+        <br>
+        <label for="valorPorDefecto">Valor por defecto:</label>
+        <input type="text" id="valorPorDefecto" name="valorPorDefecto">
+        <br>
+        <label for="grosorBorde">Grosor del borde de la tabla:</label>
+        <input type="text" id="grosorBorde" name="grosorBorde">
+        <br>
+        <label for="colorBorde">Selecciona el color del borde:</label>
+        <select name="colorBorde" id="colorBorde">
+            <option value="black" selected>Negro</option>
+            <option value="red">Rojo</option>
+            <option value="green">Verde</option>
+            <option value="orange">Naranja</option>
+        </select>
+    </form>
+    <br>
+    <button id="genTabla">Generar Tabla</button>
+
+
+</body>
+</html>
