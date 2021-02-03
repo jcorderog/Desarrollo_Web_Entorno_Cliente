@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normandía</title>
+    <script defer src="./script.js"></script>
+    <style>
+        table,
+        th,
+        td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+  
+        th,
+        td {
+          padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h1>Normndía</h1>
+        <select name="bando" id="bando">
+            <option value="1">Aliados</option>
+            <option value="2">Eje</option>
+        </select>
+        <br>
+        <button id="cargarArmasXHR">Carga Armas XHR</button>
+        <button id="cargarArmasFETCH">Carga Armas FETCH</button>
+        <hr>
+    </div>
+    <table id="armas"></table>
+</body>
+</html>
