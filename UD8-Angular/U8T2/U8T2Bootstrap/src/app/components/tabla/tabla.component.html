@@ -1,0 +1,32 @@
+<button type="button" (click)="click()" class="btn btn-primary">Cargar Datos Vacunacion (XMLHttpRequest)</button>
+&nbsp;
+<button type="button" (click)="click()" class="btn btn-primary">Cargar datos vacunación(Fetch)</button>
+
+<br><br>
+<h1>Tabla de vacunación</h1>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Comunidad</th>
+      <th scope="col">D. Admin</th>
+      <th scope="col">D. Entregadas</th>
+      <th scope="col">D. Completa</th>
+      <th scope="col">% Entregadas</th>
+      <th scope="col">%Pobl. Admin.</th>
+      <th scope="col">%Pobl. Completa</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let ccaa of dataSource; index as i">
+
+    <td>
+      {{ ccaa.ccaa }}
+    </td>
+    <td>{{ ccaa.dosisAdministradas | number }}</td>
+    <td>{{ ccaa.dosisEntregadas | number }}</td>
+    <td>{{ ccaa.dosisPautaCompletada | number }}</td>
+    <td>{{ ccaa.porcentajeEntregadas | number }}</td>
+    <td>{{ ccaa.porcentajePoblacionAdministradas | number }}</td>
+    <td>{{ ccaa.porcentajePoblacionCompletas | number }}</td>
+  </tr>
+</table>
