@@ -1,0 +1,49 @@
+&nbsp;
+CC.AA:
+<mat-form-field appearance="fill">
+  <mat-label>Comunidad</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let comunidad of comunidades" [value]="comunidad.value">
+      {{comunidad.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+&nbsp;
+D. Entregas:
+<mat-form-field class="example-full-width">
+  <mat-label>D. Entregas</mat-label>
+  <input matInput placeholder="" value="">
+</mat-form-field>
+&nbsp;
+D. Admin.:
+<mat-form-field class="example-full-width">
+  <mat-label>D. Admin.</mat-label>
+  <input matInput placeholder="" value="">
+</mat-form-field>
+&nbsp;
+D. Completas:
+<mat-form-field class="example-full-width">
+  <mat-label>D. Completas</mat-label>
+  <input matInput placeholder="" value="">
+</mat-form-field>
+<br>
+&nbsp;
+P. Entregas:
+<mat-form-field class="example-full-width">
+  <mat-label>P. Entregas</mat-label>
+  <input matInput placeholder="" value="">
+</mat-form-field>
+&nbsp;
+P. Admin.:
+<mat-form-field class="example-full-width">
+  <mat-label>P. Admin.</mat-label>
+  <input matInput placeholder="" value="">
+</mat-form-field>
+&nbsp;
+P. Completas:
+<mat-form-field class="example-full-width">
+  <mat-label>P. Completas</mat-label>
+  <input matInput placeholder="" value="">
+</mat-form-field>
+&nbsp;
+<button mat-raised-button color="primary">Modificar Datos</button>
